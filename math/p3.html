@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            background-color: rgb(255, 255, 255);
+        }
+        .container{
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            height: 100%;
+        }
+
+        .container .clock{
+            background-color: blueviolet;
+            padding: 30px;
+            width: 240px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+
+        </div>
+        <script>
+            function display(){
+                var today=new Date()
+                document.querySelector(".clock").innerHTML=`<h1> ${today.toLocaleTimeString()} </h1>`;
+            }
+            //setIntervel(handler,time)
+            setInterval(display,1000)
+        </script>
+    </div>
+</body>
+</html>

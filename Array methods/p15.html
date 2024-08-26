@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>array.map()</h1>
+    <script>
+        //return an formatted array
+        var names=["john","mark","tom","harry","sam"]
+        console.log(`names=`,names)
+
+        var res =names.map(function(val,index){
+            return "Mr/Miss"+ val;
+        })
+        console.log(`output=`,res)
+    </script>
+</body>
+</html>

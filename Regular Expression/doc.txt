@@ -1,0 +1,39 @@
+Rules of regular expression
+
+1. /expression/ if regular expression is only string
+
+2. /^condition$/ if regular expression is condition
+    ^ -> defines the beginning tag of regular expression statement
+    $ -> defines the ending tag 
+
+3.  [] -> character set (Grouping) 
+
+4. () -> capturing group of multiple characters
+
+5. [abcdef] -> input should match atleast single occurrence of any of the given characters 
+
+6. [a-z] lowercase or [A-Z] uppercase or [0-9] decimal
+
+7. [a-zA-Z]  or [a-z0-9] or [A-Z0-9] or [a-zA-Z0-9]
+
+8. [D-S]  
+
+9.  . = matches any character except line break /n
+
+10. ? = matches 0 & 1  occurrence of the preceding char, set or group
+
+11. * = matches 0 or more occurrence
+
+12. + = matches 1 and more occurrence
+
+13. {n} -> matches exactly n occurrence
+
+14. {n,m} => matches exactly n and m occurrence
+
+15. g -> global 
+
+16. gi => global case insensitive
+
+17. u => unicode (consider pattern strings are UTF-16)
+
+18. y => sticky

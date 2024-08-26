@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>read the value from form input through name</h2>
+    <form autocomplete="off" name="myForm">
+        <label for="user">Enter username</label>
+        <input type="text" name="user" id="" required>
+        <br><br>
+        <button type="button" onclick="handler()">Click</button>
+        <script>
+        function handler()
+        {
+            //document.fornmane.inputname.value
+            var username=document.myForm.user.value;
+            console.log(`user=`,username)
+        }
+    </script>
+    </form>
+</body>
+</html>

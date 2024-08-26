@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exec()</h1>
+    <p>It returns an array of captures, or null if there is no match</p>
+
+    <script>
+        var str = "Welcome to javascript.today we are learning Javascript regular expressions.Javascript is front end script.Every Browser has built in JAVASCRIPT compilers.";
+        var reg = /javascript/gi;
+        var test = reg.exec(str);
+        if (test){
+            console.log(`output=`,test)
+        } else{
+            console.log(test)
+        }
+    </script>
+</body>
+</html>

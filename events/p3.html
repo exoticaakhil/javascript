@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Events</h1>
+    <!-- 
+        onmousemove
+        onmouseover
+        onmouseout
+        onmouseleave
+        onmouseenter
+        onmouseup
+        onmousedown
+        onscroll
+        onmousewheel (deprecated)
+    -->
+
+    <div class="container" onmouseenter="inHandler()" onmouseout="outHandler()">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium optio magnam nisi hic expedita aut perferendis sint, numquam illum molestiae amet doloribus sit exercitationem, ipsa itaque velit, quidem dolor ea.</p>
+    </div>
+
+    <script>
+         function inHandler() {
+            document.querySelector(".container").style.backgroundColor = "teal";
+         }
+         function outHandler() {
+            document.querySelector(".container").style.backgroundColor = "red";
+         }
+    </script>
+</body>
+</html>

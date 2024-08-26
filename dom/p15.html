@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementsByTagName(tag)</h1>
+    <div>
+       <a href="./p14.html">Link 1</a><br>
+       <a href="./p9.html">Link 2</a><br>
+       <a href="./p8.html">Link 3</a><br>
+       <a href="./p6.html">Link 4</a><br>
+       <a href="./p3.html">Link 5</a><br>
+    </div>
+    <script>
+        var anch=document.getElementsByTagName('a')
+        var len=anch.length
+        console.log(`Total length=`,len)
+        for(let i=0;i<len;i++)
+    {
+        anch[i].style.textDecoration="none"
+    }
+    </script>
+</body>
+</html>

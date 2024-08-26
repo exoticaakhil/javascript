@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="handler()">
+     <h1>onresize() </h1>
+
+     <h3 id="out"></h3>
+
+     <script>
+        function handler() {
+            let w = screen.availWidth;
+            let h = screen.availHeight;
+
+            document.getElementById("out").innerText = `width=${w}px and height=${h}px`;
+        }
+     </script>
+</body>
+</html>

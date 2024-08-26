@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>open()</h1>
+    <!-- open the file path / url / attachment => will open in new tab or new window -->
+     <button onclick="handler1()">open tab</button>
+     <button onclick="handler2()">open window</button>
+     <script>
+        function handler1() {
+            open("https://be-practical.com")
+            
+        }
+        function handler2() {
+            open("https://be-practical.com","sample title","width=400;height=400;")
+            
+        }
+        
+     </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementById().value</h1>
+    <!-- without .value u can't handle any form inputs -->
+     <form action="">
+        <label for="">Enter name</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="">Enter email</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <button type="button" onclick="handler()">Click me</button>
+     </form>
+     <script>
+        function handler()
+        {  
+    var user=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+
+    console.log(`user=`,user)
+    console.log(`Email=`,email)
+
+        }
+     </script>
+</body>
+</html>

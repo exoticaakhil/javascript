@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setAttribute() &  removeAtrribute() </h1>
+     <div id="blk"></div>
+    <button onclick="setHandler()">setAttribute</buttoncalss>
+    <button onclick="removeHandler()">removeAttribute</button>
+    <script>
+        let blk=document.querySelector("#blk")
+        let image=document.createElement("img") 
+        function setHandler(){
+            
+            image.setAttribute("src","https://picsum.photos/id/452/400/400" )
+            image.setAttribute("alt","no image found")
+            image.setAttribute("width","200")
+            image.setAttribute("height","200")
+            blk.appendChild(image)
+
+        }
+        function removeHandler(){
+            image.removeAttribute("width")
+            image.removeAttribute("height")
+        }
+    </script>
+</body>
+</html>

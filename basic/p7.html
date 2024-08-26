@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width:50%;
+            height:100px;
+            padding:20px;
+            border:2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1> w.a.p to display the result of the student based on obtained marks</h1>
+    <form onsubmit="showResult(event)">
+        <label for="marks">Enter marks</label>
+        <input type="number" name="marks" id="marks" required>
+        <br><br>
+        <input type="submit" value="Show Result">
+    </form>
+
+    <hr>
+
+    <div id="result"></div>
+    <script>
+       
+        function showResult(event){
+            event.preventDefault(); //to avoid refreshing of the page
+            var out = document.getElementById('result');
+            var inp = document.getElementById('marks').value;
+            var marks = Number(inp);
+
+            console.log("marks",marks);
+            if(marks > 80 && marks <= 100){
+                out.innerHTML = `<h1> Result is distinction ${marks} </h1>`;
+            }
+            else if (marks >= 60 && marks < 80){
+                out.innerHTML = `<h1> Result is first class ${marks} </h1>`;
+            }
+            else if (marks >= 35 && marks < 60){
+                out.innerHTML = `<h1> Result is second class ${marks} </h1>`;
+            }
+            else if (marks >= 0 && marks < 35){
+                out.innerHTML = `<h1> Result is fail ${marks} </h1>`;
+            }
+    }
+       
+    </script>
+</body>
+</html>

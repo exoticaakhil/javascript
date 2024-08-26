@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>string match() and matchAll()</h1>
+    <script>
+        var msg="javascript is font end programming script";
+            var exp= /programming/;
+            var res=msg.match(exp);
+            console.log(`output=`,res);
+            //Matchall
+            var exp1=/script/gi;
+            var out = msg.matchAll(exp1);
+            console.log(`output =`,out);
+            for(let item of out){
+                console.log(`item =`,item);
+            }
+
+    </script>
+</body>
+</html>

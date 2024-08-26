@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>reduce(function(accumulator,current){})</h1>
+    <script>
+        var num = [10,20,30,40,50,60,70];
+        console.log('num=',num)
+
+        var out = num.reduce(function(ac,cu){
+            console.log(`ac=${ac} and cu=${cu}`)
+            return ac + cu
+        })
+        console.log('sum of num=',out)
+    </script>
+</body>
+</html>

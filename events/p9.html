@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Events</h1>
+    <!-- blur and focus -->
+    <form action="">
+        <label for="">Enter name</label>
+        <input type="text" name="name" id="name" onfocus="focusHandler()" onblur="blurHandler()">
+    </form>
+
+    <script>
+        function blurHandler() {
+            document.getElementById('name').style.backgroundColor = "orange"
+        }
+        function focusHandler() {
+            document.getElementById('name').style.backgroundColor = "green"
+        }
+    </script>
+</body>
+</html>

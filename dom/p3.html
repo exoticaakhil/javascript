@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Math table</h1>
+    <!--10 * 1 = 10 
+    accept th input from prompt
+    looping statement -->
+    <script>
+        var inp=Number(prompt("Enter the number"))
+        for(var i=1; i<=inp; i++)
+    {
+         var res=i * inp;
+         document.write(`${i} * ${inp} = ${res} <br>`)
+    }
+    </script>
+    <br>
+    <button onclick="table()">Mul Table</button>
+<script>
+    //using fn & concat operator
+    function table(){
+        var inp2=prompt("Enter the number")
+         var x=parseInt(inp2);
+         for(var i=1;i<=inp; i++)
+         {
+         res2= i* inp2
+         document.write(+i+ "*" + inp2 + "=" + res )
+         }
+ 
+    }
+</script>
+</body>
+</html>

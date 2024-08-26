@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: teal;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body oncontextmenu="handler(event)">
+     <h1>oncontextmenu (right click of the mouse) </h1>
+     <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non eligendi delectus, tenetur quo expedita et veniam perspiciatis mollitia necessitatibus perferendis inventore. Ipsam quis eveniet nam debitis fugiat reiciendis unde sint.</p>
+     </div>
+
+     <script>
+            function handler(event) {
+               event.preventDefault();// to avoid page refresh
+               alert('Right click is disabled') 
+            }
+     </script>
+</body>
+</html>

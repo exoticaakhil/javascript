@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Regular expression with string methods</h1>
+    <h2>match()</h2>
+    <script>
+        var str="welcome"
+        var reg=/[i-n]/
+        //match
+        console.log(`string match=`,str.match(reg))
+        //replace
+        console.log(`string replace=`,str.replace(reg,"star"))
+        //search = fst matched index 
+        console.log(`string seacrh=`,str.search(reg))
+        //split
+        var str1="welcomewelcomewelcome"
+        console.log(`str split=`,str.split(reg))
+        console.log(`str split=`,str1.split(reg))
+
+
+
+    </script>
+</body>
+</html>

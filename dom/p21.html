@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Siblings</h1>
+    <div>
+        <p>Sample para 1</p>
+        <p>Sample para 2</p>
+        <p>Sample para 3</p>
+        <p>Sample para 4</p>
+        <p class="fifth">Sample para 5</p>
+    </div>
+    <script>
+        let first=document.querySelector('p')
+        console.log(first)//fst node(fst para)
+        //parentElement
+        console.log(first.parentElement)//div
+        console.log(first.parentElement.parentElement)//body
+        console.log(first.parentElement.parentElement.parentElement)//html
+        console.log(first.parentElement.parentElement.parentElement.parentElement)//null
+        console.log(`\n`)
+        // child element
+        let blk=document.querySelector('div')
+            console.log(blk.children)
+            console.log(blk.children[0])
+            console.log(blk.children[4].innerText)//print the content of the child
+            console.log(`\n`)
+
+        //next element sibling
+        console.log(first.nextElementSibling) //.innerText,.textContent=>prints the text content
+        console.log(first.nextElementSibling.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
+        console.log(`\n`)
+
+        //
+
+        let fifth=document.querySelector(".fifth")
+        console.log(fifth.previousElementSibling)//p4
+        console.log(fifth.previousElementSibling.previousElementSibling)//p3..
+        console.log(`\n`)
+
+
+        //firstElementChild and lastElementChild
+        console.log(blk.firstChild)
+        console.log(blk.firstElementChild)
+        console.log(blk.lastChild)
+        console.log(blk.lastElementChild)
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

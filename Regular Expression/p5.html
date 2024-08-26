@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>replacing the position of two words</h1>
+    <script>
+        var str="Hello World"
+        var ex1=/(\w+)\s(\w+)/
+
+        var out1=str.replace(ex1,"$2 $1")
+
+        console.log(`str=`,str)
+        console.log(`out=`,out1)
+
+        // is frontend javascript a script
+        var str1 = "is frontend javascript a script";
+                var ex2 = /(\w+)\s(\w+)\s(\w+)\s(\w+)\s(\w+)/;
+                var out2 = str1.replace(ex2, "$3 $1 $4 $2 $5");
+
+                console.log(`str = `, str1);
+                console.log(`out = `, out2);
+
+                
+
+    </script>
+</body>
+</html>

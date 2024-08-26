@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blk{
+            width: 500px;
+            height: 500px;
+            overflow: auto;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>scrollTop</h1>
+    <h2 id="output"></h2>
+    <div class="blk">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem quisquam ipsum eius, nihil commodi dignissimos earum soluta blanditiis aliquam dolor minus, vero ut minima exercitationem itaque vitae, reprehenderit repellat.
+    Dolor modi provident quos, tempora assumenda nihil perferendis vel saepe laborum porro libero molestiae consequuntur minima repellendus deserunt deleniti sequi voluptates at nulla perspiciatis dolorum facere doloribus omnis iusto. Alias!
+    Aliquam alias a provident laudantium nemo ex eum nostrum quos. Dolorum voluptates sequi aspernatur illo reprehenderit. Asperiores modi, maxime iure, voluptates impedit amet ad, sunt omnis veritatis alias assumenda dicta?
+    Omnis ipsa dicta quasi quo ducimus. Nostrum et magnam quo voluptatibus ad repudiandae in necessitatibus debitis, quos facilis voluptatum enim ex eaque perferendis modi earum veniam inventore ipsam animi eum.
+    Dignissimos sit magnam, sequi consequatur dicta odio architecto nam eligendi, tenetur obcaecati provident natus. Minima a et unde quasi, necessitatibus nobis in exercitationem excepturi, blanditiis cum nemo sit. Qui, debitis!
+    At ipsum corporis corrupti accusantium odio ullam! Laboriosam aspernatur amet quam at dicta ratione nam voluptatibus, nulla magni voluptates suscipit maxime voluptatum laborum impedit tempore consectetur rerum nesciunt? A, autem!
+    Totam, voluptatem consectetur ad rem ratione eos expedita maxime cumque officia sunt natus consequatur recusandae fugit in blanditiis maiores consequuntur neque iure pariatur vel explicabo nulla. Inventore debitis ipsum tempora.
+    Maxime in, dolore voluptas laboriosam velit accusamus voluptatem quidem recusandae eum similique accusantium optio numquam impedit quo doloremque illum quisquam. Ducimus distinctio eaque illo dolor ab iste aut, provident fuga.
+    Laudantium corporis ipsam consequatur eligendi odio nobis doloribus iusto voluptatibus dolore quaerat id veniam laborum pariatur, illo incidunt ipsa aspernatur voluptas exercitationem expedita nesciunt necessitatibus modi ab! Perferendis, corporis quidem?
+    Et quos ut magnam adipisci, laborum voluptatem quisquam debitis cupiditate maxime commodi, quis consequatur! Pariatur, molestias illo ab voluptatem quibusdam beatae. Veniam a repellat magnam ea iusto voluptatibus fuga unde?
+    Et, magni labore. Quis, saepe. Sit voluptas eius delectus quasi impedit accusamus hic, ratione eum velit fuga distinctio repellat voluptates molestias cupiditate voluptatum vero facilis asperiores? Repellendus porro corporis quasi.
+    Porro ut est eos laudantium debitis a optio eveniet, ea sunt saepe? Deserunt praesentium deleniti possimus eaque beatae ullam adipisci, eligendi reiciendis natus sit magnam, facilis nam. Atque, ab commodi.
+    Esse dolorum accusamus, reiciendis laudantium similique modi? Cumque necessitatibus quidem, officia omnis aspernatur praesentium suscipit consectetur fugit nihil, corrupti harum assumenda earum. Exercitationem deleniti tempore accusantium nam laborum reprehenderit veritatis.
+    Minima dicta quas et magni atque perspiciatis eaque? Voluptate repudiandae delectus quisquam quasi culpa est vitae maiores assumenda! Dignissimos dolore eius quo facere amet aspernatur optio aliquid id consequatur aperiam.
+    Repellendus culpa, nesciunt accusantium, sint libero voluptatibus ipsa harum iusto excepturi ducimus tempora quo quasi obcaecati fugit incidunt sed illo? Cumque voluptas nihil consequuntur repudiandae veritatis illum sequi est nesciunt!
+    Alias ipsum voluptatum nisi! Magni inventore perferendis molestiae nam delectus ex reiciendis aspernatur, earum labore. Facilis necessitatibus enim esse sed ea quis quod id, magnam deserunt delectus in doloribus dolor?
+    Deserunt numquam dolores autem ad, facilis sint minima consectetur quisquam? Facilis asperiores ab ea magni maiores, dignissimos sed. Suscipit illum provident aspernatur et nostrum optio nam tenetur consequuntur facere saepe.
+    Impedit nihil, earum tempore similique debitis, necessitatibus aspernatur, architecto iste hic eaque ea. Vel voluptas, delectus vitae impedit provident ducimus odit iusto soluta, quos quis molestiae asperiores, quidem quasi voluptatibus.
+    Provident doloremque aspernatur alias. Id suscipit sit quas ipsa unde quam hic velit laboriosam cupiditate sint vitae minima facere amet libero optio adipisci, quod harum deserunt incidunt temporibus, saepe possimus.
+    Omnis officiis provident quo, doloremque voluptate culpa pariatur sequi nam numquam accusantium nihil reprehenderit ratione iusto maiores esse vel soluta minima officia, delectus animi eum consequuntur possimus. Consequuntur, labore aut!</div>
+    <script>
+        let blk=document.querySelector(".blk")
+        blk.addEventListener("scroll",function(){
+            console.log(`position=`,blk.scrollTop +"px")
+            document.getElementById("output").innerText=Math.round(blk.scrollTop) + "px";
+        })
+    </script>
+</body>
+</html>

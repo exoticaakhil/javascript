@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Firts in first out</h1>
+    <script>
+        var user =["Tom", "Ayan"]
+        console.log(`user=`,user)
+
+//array.unshift(value)
+        
+        user.unshift("Harry")//first in 
+        console.log(`after unshift=`, user)
+
+        user.unshift("Mark")//first in 
+        console.log(`after unshift=`, user)
+        //array.shift()
+        let x1 = user.shift()
+        //lastout
+        console.log(`after shift=`,user)
+        console.log(`after shift=`,x1)
+
+        let x2 = user.shift()
+        console.log(`after shift=`,user)
+        console.log(`after shift=`,x2)
+
+
+
+    </script>
+</body>
+</html>

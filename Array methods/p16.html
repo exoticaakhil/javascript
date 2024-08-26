@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array map method print the math table</h1>
+    <form autocomplete="off" method="post">
+        <div>
+            <label for="num">Enter number</label>
+            <input type="number"name="num" id="num" required>
+        </div>
+        <div>
+            <button type="button" onclick="genTable()">send</button>
+        </div>
+    </form>
+    <script>
+        let arr=[1,2,3,4,5,6,7,8,9,10]
+        function genTable(){
+            let inp=document.getElementById("num").value;
+            let out=arr.map((val,index)=>{
+                return inp * val
+            })
+            console.log(`final output=`,out)
+        }
+    </script>
+</body>
+</html>

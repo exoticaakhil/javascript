@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Number properties for float values</h1>
+    <script>
+            var x=123.67868
+            console.log(`x=`,x)
+            console.log(`typeof=`, typeof(x))//number
+
+            console.log(`toFixed=`,x.toFixed(2))//return 123.67
+            console.log(`typeof toFixed=`,typeof x.toFixed(4))//string 
+
+            console.log(`toPrecision=`,x.toPrecision(2))//1.2 e+2
+            console.log(`valueOf=`,x.valueOf())//67868
+            console.log(`Int=`,parseInt(x))
+
+            //any value to float
+            var y=123;
+            console.log(`y=`,y)
+            console.log(`Y in float=`,parseFloat(y))
+
+            var str="3.4 days"
+            console.log(`str=`,str)
+            console.log(parseFloat(str))
+            console.log(parseInt(str))
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

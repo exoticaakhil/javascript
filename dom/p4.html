@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #blk{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            padding: 20px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>getElementById</h1>
+    <div id="blk"></div>
+    <button onclick="handler()">Click me</button>
+    <script>
+        function handler(){
+            document.getElementById("blk").innerHTML="<img src='https://picsum.photos/id/123/200/200'>";
+        }
+    </script>
+</body>
+</html>

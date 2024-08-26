@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>validating mobile number</h1>
+        </div>
+    <div class="box">
+        <form autocomplete="off" method="post">
+            <div class="form-item">
+                <label for="mobile">
+                    Enter mobile number :  
+                </label>&nbsp;&nbsp;
+                <input type="text" name="mobile" id="mobile" class="form-input" onkeyup="validateMobile(event)" required>
+                <span id="status"></span>
+
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Submit" class="btn success">
+            </div>
+        </form>
+    </div>
+</div>
+    <script>
+        function validateMobile(event) {
+            event.preventDefault();
+            
+            let mobile = document.getElementById("mobile").value;
+            let status = document.getElementById("status");
+
+            /*
+                indian mobile number
+                10 digits
+                0/91/+91
+                6,7,8,9
+            */
+
+            let reg = /^[6-9]\d{9}$/;
+
+            if(mobile === "") {
+                status.innerText = "Mobile filed must be filled";
+                status.style.color = "red";
+            } else {
+                if(reg.test(mobile)) {
+                    status.innerText = "Valid mobile number";
+                    status.style.color = "green";
+                } else {
+                    status.innerText = "Invalid mobile number";
+                    status.style.color = "red";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

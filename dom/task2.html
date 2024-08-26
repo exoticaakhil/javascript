@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+    <script>
+        function calculateMarks() {
+            var john = Number(prompt("Enter marks for john" ));
+            var mac = Number(prompt("Enter marks for mac:" ));
+            var steve = Number(prompt("Enter marks for steve:"));
+
+            var totalMarks = john + mac + steve;
+            var averageMarks = totalMarks / 3;
+
+            document.getElementById("total").textContent = "Total Marks: " + totalMarks;
+            document.getElementById("average").textContent = "Average Marks: " + averageMarks.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="calculateMarks()">Enter Marks</button>
+
+    <div id="result">
+        <h1 id="total">Total Marks: 0</h1>
+        <h3 id="average">Average Marks: 0.00</h3>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Min and Max methods without values </h1>
+
+    <script>
+        var x = Math.min();
+        console.log(`Math.min()=`, Math.min()) // Infinity
+
+        var y = Math.max();
+        console.log(`Math.max()=`, Math.max()) // -Infinity
+
+        // lexicographical comparision x > y =1, x < y = -1, x === y = 0
+
+        console.log(`Infinity > -Infinity =`, x > y) //true
+        console.log(`Infinity < -Infinity =`, x < y) //false
+        console.log(`Infinity === -Infinity =`, x === y) //false
+    </script>
+</body>
+</html>

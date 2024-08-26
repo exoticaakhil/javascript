@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>splice(index,no.of delete count,values)</h1>
+
+    <script>
+        var colors =["green","red","blue"];
+
+        console.log(`colors =`, colors)
+
+        // add the into the array without delete
+
+        colors.splice(2,0,"gold","yellow","orange")
+        console.log(`colors =`, colors)
+
+        // add the values by removing the existing values
+        colors.splice(3,2,"deeppink")
+        console.log(`colors =`, colors)
+
+        // only delete values with out inserting new values
+        colors.splice(2,3)
+        console.log(`colors =`, colors)
+    </script>
+</body>
+</html>"

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>variables</h1>
+    <script>
+        // datatype name = value;
+        /* var => global scope
+           let => block scope
+           const => block scope(can't reassign)
+        */
+        var x=12;
+        var y=1234.5678;
+        var z=12345.56789569856;
+        var na = "john";
+        var isAdmin = false;
+        var a = null;
+        var b = undefined;
+        document.write("<h1> variable x ="+ x +"<h1>");
+        document.write('<h1> variable y ='+ y +'<h1>');
+        document.write(`<h1> variable z = ${z} <h1>`);
+        document.write(`<h1> my name is ${na} <h1>`);
+        document.write(`<h1> isAdmin ${isAdmin} <h1>`);
+        document.write(`<h1> null ${a} <h1>`);
+        document.write(`<h1> undefined ${b} <h1>`);
+        console.log("variable x=",x);
+        console.log("type of x=",typeof(x));
+        console.log("type of null=",typeof(a));
+        console.log("type of undefined=",typeof(b));
+    </script>
+</body>
+</html>

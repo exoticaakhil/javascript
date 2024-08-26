@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Built in constructors</h1>
+    <!-- Date,array,string,boolean,number,math,object -->
+     <script>
+        /* 
+        1.constructor structure are same like fn
+        2.constructor can't return
+        3.constructor instance create using new keyword
+        4.constructor maybe parameter / non parameterised
+        */
+
+        var x=new Date(); //
+        console.log(`Date=`,x)
+
+        //methods of dates
+        document.write(`<h3> Day= ${x.getDay()}</h3>`)
+        document.write(`<h3> Date= ${x.getDate()}</h3>`)
+        document.write(`<h3> Month= ${x.getMonth()}</h3>`)
+        document.write(`<h3> Full year= ${x.getFullYear()}</h3>`)
+        document.write(`<h3> Year= ${x.getYear()}</h3>`)
+
+        
+        //methods of time
+        document.write(`<h3> Hour= ${x.getHours()}</h3>`)
+        document.write(`<h3> Min= ${x.getMinutes()}</h3>`)
+        document.write(`<h3> Sec= ${x.getSeconds()}</h3>`)
+        document.write(`<h3> Milli sec= ${x.getMilliseconds()}</h3>`)
+
+
+        //
+        document.write(`<h3> UTC Day= ${x.getUTCDay()}</h3>`)
+        document.write(`<h3>UTC Date= ${x.getUTCDate()}</h3>`)
+        document.write(`<h3> UTC Month= ${x.getUTCMonth()}</h3>`)
+        document.write(`<h3>UTC Full year= ${x.getUTCFullYear()}</h3>`)
+
+        document.write(`<h3>UTC Hour= ${x.getUTCHours()}</h3>`)
+        document.write(`<h3>UTC Min= ${x.getMinutes()}</h3>`)
+        document.write(`<h3>UTC Sec= ${x.getUTCSeconds()}</h3>`)
+        document.write(`<h3>UTC Milli sec= ${x.getUTCMilliseconds()}</h3>`)
+     </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>validating email</h1>
+        </div>
+    <div class="box">
+        <form autocomplete="off" method="post">
+            <div class="form-item">
+                <label for="email">
+                    Enter email id :  
+                </label>&nbsp;&nbsp;
+                <input type="text" name="email" id="email" class="form-input" onkeyup="validateEmail(event)" required>
+                <span id="status"></span>
+
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Submit" class="btn success">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // emailid@domain.ext -> string@string.string
+    function validateEmail(event) {
+        event.preventDefault(); // to avoid page refresh
+        var email = document.getElementById("email").value;
+        var status = document.getElementById("status");
+
+        //reg ex
+        let reg = /^[a-zA-Z0-9_-\s]+@[a-zA-Z0-9-]+?\.[a-zA-Z]{2,10}$/;
+
+        if(email=== '') {
+            status.innerText = "Email field is empty, It must be filled";
+            status.style.color = "red";
+        } else {
+            if(reg.test(email)) {
+                status.innerText = "Valid Email id";
+                status.style.color = "green";
+            } else {
+                status.innerText = "Invalid Email id";
+                status.style.color = "red";
+            }
+        }
+    }
+</script>
+</body>
+</html>

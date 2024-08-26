@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #blk{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>textContent</h1>
+    <button onclick="handler()">Click me</button>
+    <div id="blk"></div>
+    <script>
+        var x=document.getElementById("blk");
+        function handler(){
+            var image=document.createElement('img')
+            var header=document.createElement('h1');
+        
+            //add content
+            image.src="https://picsum.photos/id/124/200/200"
+            header.textContent="Welcome"
+            x.appendChild(header);
+            x.appendChild(image);
+
+        }
+    </script>
+</body>
+</html>

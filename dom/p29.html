@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+        .circle{
+            background-color: rgb(10, 152, 105);
+        }
+    </style>
+</head>
+<body>
+    <h1>ClassList</h1>
+    <div></div>
+    <button onclick="addHandler()">Add class</button>
+    <button onclick="removeHandler()">Remove class</button>
+    <button onclick="toggleHandler()">Toggle class</button>
+    <script>
+        let blk=document.querySelector('div')
+        function addHandler(){
+            blk.classList.add('circle')
+        }
+        function removeHandler(){
+            blk.classList.remove("cirlce")
+        }
+        function toggleHandler(){
+            blk.classList.toggle("cirlce")
+        }
+    </script>
+</body>
+</html>

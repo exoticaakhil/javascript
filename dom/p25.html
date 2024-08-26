@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.hasFocus()</h1>
+    <p id="log">Focus check results are :</p>
+    <button id="btn">Open new window</button>
+    <script>
+        const body=document.querySelector("body")
+        let log = document.getElementById("log")
+        document.getElementById('btn').onclick=function(){
+        open("https://be-practical.com","new window","height=400;width=400;")
+        }
+        function checkDocFocus(){
+            if(document.hasFocus())
+        { 
+            log.textContent="This document has focus"
+            body.style.backgroundColor="#fff";
+        }
+        else{
+            log.textContent="This document doesn't focus"
+            body.style.backgroundColor="#aaa";        
+        }
+
+        }
+        setInterval(checkDocFocus,500)
+         checkDocFocus()
+    
+
+    </script>
+</body>
+</html>

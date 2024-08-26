@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String methods</h1>
+    <!-- charAt(position)
+        charCodeAt(position)
+        indexOf(char)
+        lastIndexOf(char) -->
+        <script>
+            var str="welcome to JavaScript Class"
+            console.log(`string=`,str)
+            console.log(`charAt()=`,str.charAt(0))
+            console.log(`charCodeAt()=`,str.charCodeAt(0))//ASCII
+
+            console.log(`indexOf(e)=`,str.indexOf("e"))
+             console.log(`lastIndexOf(e)`,str.lastIndexOf("e"))
+            console.log(`indexOf(a)=`,str.indexOf("a"))
+            console.log(`lastIndexOf(a)=`,str.lastIndexOf("a"))
+
+            console.log(`\n`)
+
+            var str1="John is an engineer. John is working in IBM. john stays in banglore"
+            //str.replace(target,new value)
+            console.log(`str=`,str1)
+            console.log(`replace=`,str1.replace("john","Tom"))
+            console.log(`replace=`,str1.replace(/john/,"Tom"));
+            console.log(`replace=`,str1.replace(/john/gi,"Tom"))
+            //gi=global case insensitive
+
+
+
+
+
+        </script>
+</body>
+</html>

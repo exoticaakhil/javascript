@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reverse the string</h1>
+    <script>
+        var str ="HelloWorld"
+        console.log(`str =`,str)
+        console.log(`str =`,str.split(""))
+        console.log(`str =`,str.split("").reverse())
+        console.log(`str =`,str.split("").reverse().join(""))
+        function rev(word) {
+            let out="";
+            for(let i=word.length-1;i>=0;i--){
+                out += word[i]
+            }
+            console.log(`final out =`,out)
+        }
+        rev("welcome")
+        function revs(word) {
+            let out = "";
+            let i = word.length - 1;
+            while (i >= 0) {
+                out += word[i];
+                i--;
+            }
+            console.log(`final out =`, out);
+        }
+
+       revs("12345");
+
+    
+        function revse() {
+         
+            let word = document.getElementById("inputWord").value;
+
+            let out = "";
+            let i = word.length - 1;
+            while (i >= 0) {
+                out += word[i];
+                i--;
+            }
+
+      
+            document.getElementById("output").value = out;
+        }
+    </script>
+
+    <h2>Reverse String</h2>
+    <form autocomplete="off" method="post">
+        <label for="inputWord">Enter a word:</label>
+        <input type="text" id="inputWord" name="inputWord"><br><br>
+
+        <label for="output">Reversed word:</label>
+        <input type="text" id="output" name="output" readonly><br><br>
+
+        <button type="button" onclick="revse()">Reverse</button>
+    </form>
+</body>
+</html>

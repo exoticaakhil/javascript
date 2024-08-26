@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sort the given array using ageGroup as ref</h1>
+    <script>
+        var people=[
+            {name: "john",age:22},
+            {name: "Mike",age:24},
+            {name: "Lara",age:23},
+            {name: "kane",age:22},
+            {name: "Harry",age:21},
+            {name: "jovil",age:18},
+            {name: "anna",age:24},
+            {name: "winson",age:20}
+
+
+        ]
+        function groupPeople(arr,ref){
+            return arr.reduce((ac,cu) => {
+                let val=cu[ref]; //cu['age']
+                if(!ac[val]){
+                    ac[val]=[]; //empty array based on age group value
+                }
+                //push the object based on age to respective array
+                ac[val].push(cu)
+                return ac
+
+            },{})
+        }
+        var out=groupPeople(people,"age")
+        console.log(`people=`,people)
+        console.log(`output=`,out)
+/*
+        {
+           18:[];
+           20:[];
+           22:[];
+           23:[];
+           24:[];
+        }
+*/
+    </script>
+</body>
+</html>

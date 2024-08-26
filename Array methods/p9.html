@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array sorting</h1>
+    <script>
+        let ageGroup=[18,21,23,11,24,50,45,54,55,25,40,39]
+
+        console.log(`before=`,ageGroup)
+        
+        var asc=ageGroup.sort(function(a,b){
+            return a - b
+
+        })
+        console.log(`ascending=`,asc)
+        
+         var  dsc =ageGroup.sort((a,b)=>b-a)
+         console.log(`descending=`,dsc)
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.cookie</h1>
+    <!-- cookie is browser variable, create browser property to store and retrieve the data -->
+     <div>
+        <label for="user">Enter name</label>
+        <input type="text" name="user" id="user" required>
+     </div>
+     <button onclick="setHandler()">Set cookie</button>
+     <button onclick="clearHandler()">Clear cookie</button>
+
+     <hr>
+     <h1 id="output"></h1>
+     <script>
+        //setting cookie 
+        function setHandler(){
+            let x=document.getElementById("user").value;
+            document.cookie=`username=${x};expires=6 Aug 2024 10:30:00 GMT+5:30;SameSite=None;Secure`
+            console.log(`Cookie set successfully`)
+            window.location.reload();
+        }
+        function readHandler(){
+if(document.cookie)
+{
+    console.log(document.cookie)
+    let res=document.cookie.split("=")
+    console.log(res)
+    document.getElementById("output").innerText=`cookie name=${res[0]} and value=${res[1]}`
+}
+else{
+    document.getElementById("output").innerText="no cookie is set"
+}
+
+}        readHandler()
+
+
+
+//clear the cookie
+function clearHandler(){
+    if(confirm(`Do you wish to clear the cookie?`))
+{
+    let today=new Date(); // current date and time
+    console.log(today)
+
+    today.setTime(today.getTime() - 1)//expired time
+    document.cookie=`username=;expires=${today.toGMTString()}`;
+    alert("Cookie cleared successfully")
+    window.location.reload()
+}
+}
+     </script>
+</body>
+</html>

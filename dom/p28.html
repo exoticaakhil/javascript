@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blk{
+            width: 300px;
+            height: 200px;
+            background-color: rgb(8, 122, 84);
+            color: aliceblue;
+            padding: 20px 30px 40px 50px;
+            margin: 10px 15px 20px 25px;
+            text-align: justify;
+            border: 6px solid red;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h1>cleintHeight, clientWidth, clientTop, clientLeft</h1>
+    <div class="blk">
+        <h3>Block heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quibusdam delectus nostrum odio illum veniam culpa quae earum accusantium similique autem, quia quaerat nulla ab eaque voluptas sed ipsam debitis.</p>
+    </div>
+    <script>
+        let x=document.querySelector('.blk');
+        console.log(`clientHeight=`,x.clientHeight);//height+paddingTop+paddingBottom
+        console.log(`clientWidth=`,x.clientWidth);//width+paddingLeft+paddingRight
+
+        console.log(`clientTop=`,x.clientTop);//borderTop
+        console.log(`clientLeft=`,x.clientLeft);//borderLeft
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>accepting the user input</h1>
+    <form autocomplete="off">
+        <div>
+            <label for="">enter names</label><br><br>
+            <textarea name="user" id="user" required cols="40" rows="6" placeholder="enter names sepersted by space"></textarea>
+        </div>
+        <div>
+            <button onclick="submitHandler()" type="button">enter</button>
+        </div>
+    </form>
+    <script>
+        function submitHandler(){
+            let data=document.getElementById("user").value;
+            console.log(`data=`,data)
+            let out  = data.split(" ")
+            console.log(`output=`,out)
+        }
+    </script>
+</body>
+</html>
