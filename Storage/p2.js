@@ -11,6 +11,7 @@ let amountEl = document.getElementById("amount");
 let submitBtn = document.getElementById("submitBtn");
 //to handle update
 let isEdit = false;
+let editItemId ="";
 
 
 // list -> transactions
@@ -34,14 +35,20 @@ formEl.addEventListener("submit" , function(event) {
     } else {
     // form inputs
     let trData = {
-        id: Math.round(Math.random() * 100000),
+        id:isEdit?editItemId: Math.round(Math.random() * 100000),
         title: titleEl.value,
         amount: amountEl.value
     };
     console.log(`object =`, trData);
+    if(isEdit){
+// update transactions
+    updateTransation(trData)
+    }else{
+//adding transactions
     storeTransactions(trData);
+    }
 }
-})
+});
 
 
 // store transactions in local storage
@@ -49,13 +56,30 @@ function storeTransactions(val) {
     data.unshift(val);
     localStorage.setItem("transactions", JSON.stringify(data));
     alert("Transaction added successfully");
-    updateBalanceEXP();
-    //window.location.reload();
+
+    updateIncomeEXP();
+    window.location.reload();
+}
+//to update the existing transations
+function updateTransation(val){
+    let itemIndex = data.findIndex(item => item.id == editItemId)
+    console.log(`editItemId =`,editItemId)
+    console.log(`ItemIndex =`,itemIndex)
+
+    let updateVal ={
+        id: editItemId,
+        ...val
+    }
+    data.splice(itemIndex,1,updateVal)
+    localStorage.setItem("transactions", JSON.stringify(data));
+    alert("Transaction added successfully");
+    updateIncomeEXP();
+    window.location.reload();
+
 }
 
-
 // update the balance , income and expense
-function updateBalanceEXP() {
+function updateIncomeEXP() {
     let amounts = data.map((item,index) => {
         return Number(item.amount)
     })
@@ -76,7 +100,7 @@ function updateBalanceEXP() {
 }
 
 // to edit transaction
-updateBalanceEXP();
+updateIncomeEXP();
 // edit
 function editItem(id) {
     let itemVal = data.find((item) => item.id === id)
@@ -84,6 +108,7 @@ function editItem(id) {
     titleEl.value = itemVal.title
     amountEl.value = itemVal.amount
     isEdit = true;
+    editItemId =id
     submitBtn.innerText = "Update"
 }
 //delete
