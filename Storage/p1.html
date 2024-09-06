@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Storage</h1>
+    <!-- localStorage.setItem(key,value) 
+         localStorage.getItem(key)
+         localStorage.removeItem(key)
+         localStorage.clear()
+
+     -->
+
+    <form action="post" onsubmit="submitHanler(event)">
+        <div class="form-item">
+            <label for="name">Enter name</label>
+            <input type="text" name="name" id="name" class="form-input" required>
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Submit" class="btn success">
+        </div>
+    </form>
+    <hr>
+    <div class="output"></div>
+</div>
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>
